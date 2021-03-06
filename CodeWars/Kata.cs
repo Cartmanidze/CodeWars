@@ -31,5 +31,8 @@ namespace CodeWars
         {
             return string.Join(" ", str.Split(' ').Select(w => !w.All(char.IsLetter) ? w : w.Substring(1, w.Length - 1) + w[0] + "ay"));
         }
+
+        public static string UInt32ToIP(uint ip)
+            => string.Join(".", BitConverter.GetBytes(ip).Reverse());
     }
 }
