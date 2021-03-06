@@ -6,7 +6,7 @@ namespace CodeWars
     {
         static void Main(string[] args)
         {
-            var a = Kata.PigIt("Pig latin is cool");
+            var result = Kata.PigIt("Pig latin is cool");
         }
     }
 }

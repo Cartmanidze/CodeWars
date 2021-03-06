@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Text;
 
 namespace CodeWars
@@ -24,6 +25,11 @@ namespace CodeWars
                 }
             }
             return result.ToString(0, result.Length - 1);
+        }
+
+        public static string PigItBetter(string str)
+        {
+            return string.Join(" ", str.Split(' ').Select(w => !w.All(char.IsLetter) ? w : w.Substring(1, w.Length - 1) + w[0] + "ay"));
         }
     }
 }
